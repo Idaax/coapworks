@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>$(AssemblyName)</Title>
+    <Authors>Idaax Inc.</Authors>
+    <Product>CoAPWorks</Product>
+    <Description>Client library to simplify calling the CoAPWorks CoAP API</Description>
+    <Copyright>2023 All rights reserved</Copyright>
+    <PackageProjectUrl>https://github.com/idaax/coapworks</PackageProjectUrl>
+    <PackageIcon>assets\coapworks-logo-alt.png</PackageIcon>
+    <PackageReadmeFile>assets\README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/idaax/coapworks</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Idaax.NetStandard.CoAPSharp" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="assets\coapworks-logo-alt.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="assets\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
