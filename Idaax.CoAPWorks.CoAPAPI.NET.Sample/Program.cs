@@ -26,7 +26,7 @@
 using Idaax.CoAPWorks.CoAPAPI.Client;
 using System.Collections;
 
-var machine = new Machine("[Machine ID]", "[Channel ID]", "[NOT USED IN THIS SAMPLE]");
+var machine = new Machine("[Machine ID]", "[Channel ID]", null);
 
 //Get the UTC time for the sensor node
 DateTime utcDt = machine.GetUTCDateTime(false);
