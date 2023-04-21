@@ -1,8 +1,9 @@
 # CoAPWorks Samples
 This repository contains a collection of SDKs , samples and guides to work with [CoAPWorks](https://coapworks.com) APIs.
 
-## Idaax.CoAPWorks.CoAPAPI.Client
-This is the source code for the CoAP API client library. This creates a nuget package for .NET based projects. The Nuget package can be found [here](https://www.nuget.org/packages/Idaax.CoAPWorks.CoAPAPI.Client)
+## Idaax.CoAPWorks.CoAPAPI.NET.Sample
+This sample showcases how we can use the CoAPSharp library (.NET Standard) and communicate with the CoAP APIs exposed by CoAPWorks.
+
 This package provides wrapper classes for a field deployed device to perform the following:
 
 1. Get current UTC date and time
@@ -12,6 +13,3 @@ This package provides wrapper classes for a field deployed device to perform the
 5. Send email alert from the machine
 6. Send a machine heartbeat
 7. Send machine feeds for storage
-
-## Idaax.CoAPWorks.CoAPAPI.Client.Sample
-This sample project shows how to use the [Idaax.CoAPWorks.CoAPAPI.Client Nuget package](https://www.nuget.org/packages/Idaax.CoAPWorks.CoAPAPI.Client)
