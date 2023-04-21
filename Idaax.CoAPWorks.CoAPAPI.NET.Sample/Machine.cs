@@ -1,4 +1,4 @@
-﻿/******************************************************************************
+/******************************************************************************
     CoAPWorks CoAP API Client
     
     MIT License
@@ -46,6 +46,50 @@ namespace Idaax.CoAPWorks.CoAPAPI.Client
         public Machine(string machineId, string channelId , string clientSecret ) :
             base(machineId, channelId, clientSecret)
         { }
+        /// <summary>
+        /// Provision the machine
+        /// </summary>
+        /// <param name="encPayload">Should we use payload encryption during provisioning</param>
+        /// <param name="pToken">The provisioning token</param>
+        /// <returns>The new machine Id and secret key</returns>
+        public string Provision(bool encPayload,string pToken)
+        {
+            string newMachineId = null;
+            //Step 1: Initialize provisioning
+            string url = $"/machine/pme?mid={_machineId}{GetUrlComponentsForSecureExchange(encPayload)}";
+            ushort messageId = UInt16.Parse(DateTime.UtcNow.ToString("mmssf"));
+
+            CoAPRequest req = new CoAPRequest(CoAPMessageType.CON, CoAPMessageCode.POST, messageId);
+            req.SetURL(COAPWORKS_CAPI_BASE_URL + url);
+            req.SetContentFormat(new CoAPContentFormatOption(CoAPContentFormatOption.TEXT_PLAIN));//Body is in text-plain
+            req.AddPayload($"pt={pToken}");//Add provisioning token to the body as text
+            //WARN: This sample does not support secure provisioning
+
+            CoAPResponse resp = SendReceive(req);
+            bool success = IsResponseStatusSuccess(resp);
+            if(success)
+            {
+                //Provisioning initiated successfully...
+                //The body will contain the new machine Id
+                //If the machine is configured for secure authentication and encrypted payload
+                //Then the body will have the following [New Machine Id] : [Secret Key]
+                Hashtable ht = GetResponsePayload(resp);
+                newMachineId = ht["mid"].ToString().Trim();
+                //Complete provisioning
+                url = $"/machine/pcm?mid={newMachineId}{GetUrlComponentsForSecureExchange(encPayload)}";
+                
+                req = new CoAPRequest(CoAPMessageType.CON, CoAPMessageCode.POST, messageId);
+                req.SetURL(COAPWORKS_CAPI_BASE_URL + url);
+
+                resp = SendReceive(req);
+                success = IsResponseStatusSuccess(resp);
+
+                if(!success){
+                    newMachineId = null;//reset
+                }
+            }
+            return newMachineId;
+        }
         /// <summary>
         /// Get the current UTC date and time from the CoAP API server
         /// </summary>
