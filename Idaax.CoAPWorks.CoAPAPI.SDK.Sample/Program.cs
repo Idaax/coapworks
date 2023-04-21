@@ -1,8 +1,8 @@
 ﻿using Idaax.CoAPWorks.CoAPAPI.Client;
 using System.Collections;
-
-//var machine = new Machine("[Machine ID]", "[Channel ID]", "[NOT USED IN THIS SAMPLE]");
-var machine = new Machine("IDXINC0000", "TEMPSENSOR", "[NOT USED IN THIS SAMPLE]");
+//The Machine ID is to be replaced with your machine ID as defined during machine configuration on CoAPWorks
+//The Channel ID is to be replaced with your channel ID as defined during machine configuration on CoAPWorks
+var machine = new Machine("[Machine ID]", "[Channel ID]", "[NOT USED IN THIS SAMPLE]");
 
 //Get the UTC time for the sensor node
 DateTime utcDt = machine.GetUTCDateTime(false);
