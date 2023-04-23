@@ -1,9 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Idaax.CoAPWorks.CoAPAPI.NET.Sample", "Idaax.CoAPWorks.CoAPAPI.NET.Sample\Idaax.CoAPWorks.CoAPAPI.NET.Sample.csproj", "{8718978E-5CDA-40AA-8225-E2E7665C85A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Idaax.CoAPWorks.WebAPI.NET.Sample", "Idaax.CoAPWorks.WebAPI.NET.Sample\Idaax.CoAPWorks.WebAPI.NET.Sample.csproj", "{9241D729-6FAB-4A01-BEC9-A6CCB49AD076}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8718978E-5CDA-40AA-8225-E2E7665C85A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8718978E-5CDA-40AA-8225-E2E7665C85A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8718978E-5CDA-40AA-8225-E2E7665C85A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9241D729-6FAB-4A01-BEC9-A6CCB49AD076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9241D729-6FAB-4A01-BEC9-A6CCB49AD076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9241D729-6FAB-4A01-BEC9-A6CCB49AD076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9241D729-6FAB-4A01-BEC9-A6CCB49AD076}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
