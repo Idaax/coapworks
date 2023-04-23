@@ -1,7 +1,7 @@
 # CoAPWorks Samples
 This repository contains a collection of SDKs , samples and guides to work with [CoAPWorks](https://coapworks.com) APIs.
 
-## Idaax.CoAPWorks.CoAPAPI.NET.Sample
+## Idaax.CoAPWorks.CoAPAPI.NET.Sample : How to use the CoAPWorks CoAP APIs
 This sample showcases how we can use the CoAPSharp library (.NET Standard) and communicate with the CoAP APIs exposed by CoAPWorks.
 
 This package provides wrapper classes for a field deployed device to perform the following:
@@ -14,7 +14,7 @@ This package provides wrapper classes for a field deployed device to perform the
 6. Send a machine heartbeat
 7. Send machine feeds for storage
 
-## Idaax.CoAPWorks.WebAPI.NET.Sample
+## Idaax.CoAPWorks.WebAPI.NET.Sample : How to use the CoAPWorks HTTP RESTful APIs
 This sample shows how you can use the CoAPWorks HTTP RESTful Web APIs to automate most of CoAPWorks machine management tasks.
 Before you can run these examples, you should create an HTTP Web Client instance on CoAPWorks website. 
 
