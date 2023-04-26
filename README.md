@@ -33,3 +33,13 @@ The examples cover the following:
 12. Delete machine settings
 13. Delete a machine channel
 14. Delete a machine
+
+## Idaax.CoAPWorks.Webhook.NET.Sample : How to write a webhook to accept events from CoAP API server
+When your field deployed machine sends data/events to CoAPWorks server via the CoAP API, we can notify you of those events via webhook. Currently, you get notified on the following events:
+1. When a machine heartbeat is sent
+2. When a channel feed store message is sent
+3. When a machine provisioning starts 
+4. When a machine is successfully provisioned.
+
+You will need to configure the Webhook in the CoAPWorks website and update the secret key in the Controller for this to work.
+For local testing, you can use [ngrok](https://ngrok.com/)
